@@ -98,14 +98,20 @@ function howManyHours(mph) {
     return hours;
 }
 
-// console.log(howManyGallons(mph75));
-console.log(priceOfTrip(mph55));
+//How many gallons of fuel will you need for the entire trip?
+console.log(`It will take ${howManyGallons(mph55)} gallons to complete your trip going 50mph!`);
+console.log(`It will take ${howManyGallons(mph60)} gallons to complete your trip going 50mph!`);
+console.log(`It will take ${howManyGallons(mph75)} gallons to complete your trip going 50mph!`);
 
-console.log(`It will cost ${price}`);
+//Will your budget be enough to cover the fuel expense?
+console.log(`Going 55 mph you can afford the price of the trip (${priceOfTrip(mph55)})`);
+console.log(`Going 60 mph you can afford the price of the trip (${priceOfTrip(mph60)})`);
+console.log(`Going 75 mph you can't afford the price of the trip (${priceOfTrip(mph75)})`);
 
-console.log(`It will take ${howManyHours(50)} hours to complete your trip going 50mph!`);
+//How long will the trip take, in hours?
+console.log(`It will take ${howManyHours(55)} hours to complete your trip going 50mph!`);
 console.log(`It will take ${howManyHours(60)} hours to complete your trip going 60mph!`);
-console.log(`It will take ${howManyHours(75)} hours to complete your trip going 75mph!`);;
+console.log(`It will take ${howManyHours(75)} hours to complete your trip going 75mph!`);
 
 
 
