@@ -7,7 +7,7 @@ const n4 = 5;
 // Check one: add up to 50
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
-const isSum50 = (n1 + n2 + n3 + n4) == 50;
+const isSum50 = (n1 + n2 + n3 + n4) === 50;
 console.log("According to isSum50 these four numbers total up to 50 (" + isSum50 + ")");
 
 // Check two: at least two odd numbers
@@ -51,6 +51,8 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
 
 
+//Math Problems:
+
 // Checks if all numbers are divisible by 5
 const divBy5 = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) === 0;
 console.log(divBy5);
@@ -63,5 +65,42 @@ console.log(firstLast);
 const arithChain = ((n1 - n2) * n3) % n4;
 console.log(arithChain);
 
+
+//Practical Problems: 
+
+const distanceOfTrip = 1500;
+const budget = 175;
+const perGallon = 3;
+
+//How many miles per gallon each speed gets you:
+const mph55 = 30;
+const mph60 = 28;
+const mph75 = 23;
+
+function howManyGallons(efficiency) {
+    const totalGallons = distanceOfTrip / efficiency;
+
+    return (totalGallons);
+}
+
+function priceOfTrip(efficiency) {
+    const price = howManyGallons(efficiency) * perGallon;
+    if(price <= budget) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+// function howManyHours(mph) {
+//     let hours = distanceOfTrip / mph;
+
+//     return hours;
+// }
+
+// console.log(howManyHours(75));
+console.log(howManyGallons(mph75));
+console.log(priceOfTrip(mph75));
 
 
