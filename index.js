@@ -83,24 +83,29 @@ function howManyGallons(efficiency) {
     return (totalGallons);
 }
 
+
+
 function priceOfTrip(efficiency) {
     const price = howManyGallons(efficiency) * perGallon;
-    if(price <= budget) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    const canAfford = price <= budget;
+
+    return canAfford;
 }
 
-// function howManyHours(mph) {
-//     let hours = distanceOfTrip / mph;
+function howManyHours(mph) {
+    let hours = distanceOfTrip / mph;
 
-//     return hours;
-// }
+    return hours;
+}
 
-// console.log(howManyHours(75));
-console.log(howManyGallons(mph75));
-console.log(priceOfTrip(mph75));
+// console.log(howManyGallons(mph75));
+console.log(priceOfTrip(mph55));
+
+console.log(`It will cost ${price}`);
+
+console.log(`It will take ${howManyHours(50)} hours to complete your trip going 50mph!`);
+console.log(`It will take ${howManyHours(60)} hours to complete your trip going 60mph!`);
+console.log(`It will take ${howManyHours(75)} hours to complete your trip going 75mph!`);;
+
 
 
