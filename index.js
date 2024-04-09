@@ -51,7 +51,7 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
 
 
-//Math Problems:
+// Math Problems:
 
 // Checks if all numbers are divisible by 5
 const divBy5 = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) === 0;
@@ -66,49 +66,53 @@ const arithChain = ((n1 - n2) * n3) % n4;
 console.log(arithChain);
 
 
-//Practical Problems: 
+
+// Practical Problems: 
 
 const distanceOfTrip = 1500;
 const budget = 175;
-const perGallon = 3;
+const costPerGallon = 3;
 
-//How many miles per gallon each speed gets you:
+// Car fuel efficiency // How many miles per gallon each speed gets you.
 const mph55 = 30;
 const mph60 = 28;
 const mph75 = 23;
 
+// Takes the car fuel efficiency (see comment above) and returns how many gallons it takes to complete 1 trip (totalGallons).
 function howManyGallons(efficiency) {
     const totalGallons = distanceOfTrip / efficiency;
 
     return (totalGallons);
 }
 
-
-
+// Takes car fuel efficiency and uses it as an argument in the howManyGallons() function. After getting the number of totalGallons -
+// we multiply it by costPerGallon, giving us the total price. Afterwards we compare the price and ensure it is less than or equal to our budget.
+// We then store the answer in a variable (canAfford) and then return it, telling us whether or not we can afford the price of the trip at the selected speed.
 function priceOfTrip(efficiency) {
-    const price = howManyGallons(efficiency) * perGallon;
+    const price = howManyGallons(efficiency) * costPerGallon;
     const canAfford = price <= budget;
 
     return canAfford;
 }
 
+// Takes mph and divides it into how many miles we plan to travel (distanceOfTrip). Stores the result into a variable and returns it.
 function howManyHours(mph) {
     let hours = distanceOfTrip / mph;
 
     return hours;
 }
 
-//How many gallons of fuel will you need for the entire trip?
+// How many gallons of fuel will you need for the entire trip?
 console.log(`It will take ${howManyGallons(mph55)} gallons to complete your trip going 50mph!`);
 console.log(`It will take ${howManyGallons(mph60)} gallons to complete your trip going 50mph!`);
 console.log(`It will take ${howManyGallons(mph75)} gallons to complete your trip going 50mph!`);
 
-//Will your budget be enough to cover the fuel expense?
+// Will your budget be enough to cover the fuel expense?
 console.log(`Going 55 mph you can afford the price of the trip (${priceOfTrip(mph55)})`);
 console.log(`Going 60 mph you can afford the price of the trip (${priceOfTrip(mph60)})`);
 console.log(`Going 75 mph you can't afford the price of the trip (${priceOfTrip(mph75)})`);
 
-//How long will the trip take, in hours?
+// How long will the trip take, in hours?
 console.log(`It will take ${howManyHours(55)} hours to complete your trip going 50mph!`);
 console.log(`It will take ${howManyHours(60)} hours to complete your trip going 60mph!`);
 console.log(`It will take ${howManyHours(75)} hours to complete your trip going 75mph!`);
