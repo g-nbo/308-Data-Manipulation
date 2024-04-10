@@ -61,7 +61,7 @@ console.log(divBy5);
 const firstLast = (n1 > n4);
 console.log(firstLast);
 
-//Arithmetic chain
+// Arithmetic chain
 const arithChain = ((n1 - n2) * n3) % n4;
 console.log(arithChain);
 
@@ -116,6 +116,9 @@ console.log(`Going 75 mph you can't afford the price of the trip (${priceOfTrip(
 console.log(`It will take ${howManyHours(55)} hours to complete your trip going 50mph!`);
 console.log(`It will take ${howManyHours(60)} hours to complete your trip going 60mph!`);
 console.log(`It will take ${howManyHours(75)} hours to complete your trip going 75mph!`);
+
+console.log(`After comparing all 3 speeds, the one that makes the most sense to me is 60mph. 
+This will allow us to get their in as little time as possible, while still being able to afford the cost of the trip. `)
 
 
 
